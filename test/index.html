@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>VideoSpeed test</title>
+<style>body{font:14px system-ui;padding:20px} video{width:320px;display:block;margin:8px 0} section{margin-bottom:24px} code{background:#eee;padding:2px 4px}</style>
+</head>
+<body>
+<h1>VideoSpeed test page</h1>
+<p>Expected: popup reports <b>3 videos / 2 frames</b>. Rates shown live below.</p>
+
+<section>
+  <h3>1. Top-level &lt;video&gt;</h3>
+  <video id="v1" src="sample.mp4" controls muted loop></video>
+  <div>rate: <code id="r1">?</code></div>
+</section>
+
+<section>
+  <h3>2. Inside open shadow root</h3>
+  <shadow-video></shadow-video>
+  <div>rate: <code id="r2">?</code></div>
+</section>
+
+<section>
+  <h3>3. Inside &lt;iframe&gt; (frame.html)</h3>
+  <iframe src="frame.html" width="360" height="260" style="border:1px solid #ccc"></iframe>
+</section>
+
+<script>
+class ShadowVideo extends HTMLElement {
+  connectedCallback() {
+    const root = this.attachShadow({ mode: "open" });
+    root.innerHTML = '<video src="sample.mp4" controls muted loop style="width:320px;display:block"></video>';
+  }
+}
+customElements.define("shadow-video", ShadowVideo);
+const v2 = document.querySelector("shadow-video").shadowRoot.querySelector("video");
+setInterval(() => {
+  document.getElementById("r1").textContent = document.getElementById("v1").playbackRate;
+  document.getElementById("r2").textContent = v2.playbackRate;
+}, 250);
+</script>
+</body>
+</html>

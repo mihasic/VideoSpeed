@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2759EF5B305D85B600F524FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2759EF5A305D85B600F524FD /* AppDelegate.swift */; };
+		2759EF5F305D85B600F524FD /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 2759EF5D305D85B600F524FD /* Main.html */; };
+		2759EF61305D85B600F524FD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2759EF60305D85B600F524FD /* Icon.png */; };
+		2759EF63305D85B600F524FD /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 2759EF62305D85B600F524FD /* Style.css */; };
+		2759EF65305D85B600F524FD /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 2759EF64305D85B600F524FD /* Script.js */; };
+		2759EF67305D85B600F524FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2759EF66305D85B600F524FD /* ViewController.swift */; };
+		2759EF6A305D85B600F524FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2759EF68305D85B600F524FD /* Main.storyboard */; };
+		2759EF6C305D85B700F524FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2759EF6B305D85B700F524FD /* Assets.xcassets */; };
+		2759EF73305D85B700F524FD /* VideoSpeed Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2759EF72305D85B700F524FD /* VideoSpeed Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2759EF78305D85B700F524FD /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2759EF77305D85B700F524FD /* SafariWebExtensionHandler.swift */; };
+		2759EF89305D85B800F524FD /* popup in Resources */ = {isa = PBXBuildFile; fileRef = 2759EF84305D85B700F524FD /* popup */; };
+		2759EF8A305D85B800F524FD /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 2759EF85305D85B700F524FD /* background.js */; };
+		2759EF8B305D85B800F524FD /* images in Resources */ = {isa = PBXBuildFile; fileRef = 2759EF86305D85B700F524FD /* images */; };
+		2759EF8C305D85B800F524FD /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 2759EF87305D85B700F524FD /* manifest.json */; };
+		2759EF8D305D85B800F524FD /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 2759EF88305D85B700F524FD /* lib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2759EF74305D85B700F524FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2759EF4F305D85B600F524FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2759EF71305D85B700F524FD;
+			remoteInfo = "VideoSpeed Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2759EF7F305D85B700F524FD /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = PlugIns;
+			files = (
+				2759EF73305D85B700F524FD /* VideoSpeed Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2759EF57305D85B600F524FD /* VideoSpeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoSpeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2759EF5A305D85B600F524FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2759EF5E305D85B600F524FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		2759EF60305D85B600F524FD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		2759EF62305D85B600F524FD /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		2759EF64305D85B600F524FD /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		2759EF66305D85B600F524FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2759EF69305D85B600F524FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2759EF6B305D85B700F524FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2759EF6D305D85B700F524FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2759EF72305D85B700F524FD /* VideoSpeed Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "VideoSpeed Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2759EF77305D85B700F524FD /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		2759EF79305D85B700F524FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2759EF84305D85B700F524FD /* popup */ = {isa = PBXFileReference; lastKnownFileType = folder; name = popup; path = ../../extension/popup; sourceTree = "<group>"; };
+		2759EF85305D85B700F524FD /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = background.js; path = ../../extension/background.js; sourceTree = "<group>"; };
+		2759EF86305D85B700F524FD /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = ../../extension/images; sourceTree = "<group>"; };
+		2759EF87305D85B700F524FD /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../extension/manifest.json; sourceTree = "<group>"; };
+		2759EF88305D85B700F524FD /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = ../../extension/lib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2759EF54305D85B600F524FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		2759EF6F305D85B700F524FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2759EF4E305D85B600F524FD = {
+			isa = PBXGroup;
+			children = (
+				2759EF59305D85B600F524FD /* VideoSpeed */,
+				2759EF76305D85B700F524FD /* VideoSpeed Extension */,
+				2759EF58305D85B600F524FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2759EF58305D85B600F524FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2759EF57305D85B600F524FD /* VideoSpeed.app */,
+				2759EF72305D85B700F524FD /* VideoSpeed Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2759EF59305D85B600F524FD /* VideoSpeed */ = {
+			isa = PBXGroup;
+			children = (
+				2759EF5A305D85B600F524FD /* AppDelegate.swift */,
+				2759EF66305D85B600F524FD /* ViewController.swift */,
+				2759EF68305D85B600F524FD /* Main.storyboard */,
+				2759EF6B305D85B700F524FD /* Assets.xcassets */,
+				2759EF6D305D85B700F524FD /* Info.plist */,
+				2759EF5C305D85B600F524FD /* Resources */,
+			);
+			path = VideoSpeed;
+			sourceTree = "<group>";
+		};
+		2759EF5C305D85B600F524FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2759EF5D305D85B600F524FD /* Main.html */,
+				2759EF60305D85B600F524FD /* Icon.png */,
+				2759EF62305D85B600F524FD /* Style.css */,
+				2759EF64305D85B600F524FD /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2759EF76305D85B700F524FD /* VideoSpeed Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2759EF83305D85B700F524FD /* Resources */,
+				2759EF77305D85B700F524FD /* SafariWebExtensionHandler.swift */,
+				2759EF79305D85B700F524FD /* Info.plist */,
+			);
+			path = "VideoSpeed Extension";
+			sourceTree = "<group>";
+		};
+		2759EF83305D85B700F524FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2759EF84305D85B700F524FD /* popup */,
+				2759EF85305D85B700F524FD /* background.js */,
+				2759EF86305D85B700F524FD /* images */,
+				2759EF87305D85B700F524FD /* manifest.json */,
+				2759EF88305D85B700F524FD /* lib */,
+			);
+			name = Resources;
+			path = "VideoSpeed Extension";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2759EF56305D85B600F524FD /* VideoSpeed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2759EF80305D85B700F524FD /* Build configuration list for PBXNativeTarget "VideoSpeed" */;
+			buildPhases = (
+				2759EF53305D85B600F524FD /* Sources */,
+				2759EF54305D85B600F524FD /* Frameworks */,
+				2759EF55305D85B600F524FD /* Resources */,
+				2759EF7F305D85B700F524FD /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2759EF75305D85B700F524FD /* PBXTargetDependency */,
+			);
+			name = VideoSpeed;
+			productName = VideoSpeed;
+			productReference = 2759EF57305D85B600F524FD /* VideoSpeed.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2759EF71305D85B700F524FD /* VideoSpeed Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2759EF7C305D85B700F524FD /* Build configuration list for PBXNativeTarget "VideoSpeed Extension" */;
+			buildPhases = (
+				2759EF6E305D85B700F524FD /* Sources */,
+				2759EF6F305D85B700F524FD /* Frameworks */,
+				2759EF70305D85B700F524FD /* Resources */,
+			);
+			buildRules = (
+			);
+			name = "VideoSpeed Extension";
+			productName = "VideoSpeed Extension";
+			productReference = 2759EF72305D85B700F524FD /* VideoSpeed Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2759EF4F305D85B600F524FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					2759EF56305D85B600F524FD = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					2759EF71305D85B700F524FD = {
+						CreatedOnToolsVersion = 27.0;
+					};
+				};
+			};
+			buildConfigurationList = 2759EF52305D85B600F524FD /* Build configuration list for PBXProject "VideoSpeed" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2759EF4E305D85B600F524FD;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 2759EF58305D85B600F524FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2759EF56305D85B600F524FD /* VideoSpeed */,
+				2759EF71305D85B700F524FD /* VideoSpeed Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2759EF55305D85B600F524FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				2759EF61305D85B600F524FD /* Icon.png in Resources */,
+				2759EF6A305D85B600F524FD /* Main.storyboard in Resources */,
+				2759EF65305D85B600F524FD /* Script.js in Resources */,
+				2759EF5F305D85B600F524FD /* Main.html in Resources */,
+				2759EF6C305D85B700F524FD /* Assets.xcassets in Resources */,
+				2759EF63305D85B600F524FD /* Style.css in Resources */,
+			);
+		};
+		2759EF70305D85B700F524FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				2759EF8C305D85B800F524FD /* manifest.json in Resources */,
+				2759EF8D305D85B800F524FD /* lib in Resources */,
+				2759EF8B305D85B800F524FD /* images in Resources */,
+				2759EF8A305D85B800F524FD /* background.js in Resources */,
+				2759EF89305D85B800F524FD /* popup in Resources */,
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2759EF53305D85B600F524FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				2759EF67305D85B600F524FD /* ViewController.swift in Sources */,
+				2759EF5B305D85B600F524FD /* AppDelegate.swift in Sources */,
+			);
+		};
+		2759EF6E305D85B700F524FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				2759EF78305D85B700F524FD /* SafariWebExtensionHandler.swift in Sources */,
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2759EF75305D85B700F524FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2759EF71305D85B700F524FD /* VideoSpeed Extension */;
+			targetProxy = 2759EF74305D85B700F524FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2759EF5D305D85B600F524FD /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2759EF5E305D85B600F524FD /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		2759EF68305D85B600F524FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2759EF69305D85B600F524FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2759EF7A305D85B700F524FD /* Debug configuration for PBXProject "VideoSpeed" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2759EF7B305D85B700F524FD /* Release configuration for PBXProject "VideoSpeed" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		2759EF7D305D85B700F524FD /* Debug configuration for PBXNativeTarget "VideoSpeed Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VideoSpeed Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "VideoSpeed Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mihasic.VideoSpeed.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2759EF7E305D85B700F524FD /* Release configuration for PBXNativeTarget "VideoSpeed Extension" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VideoSpeed Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "VideoSpeed Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mihasic.VideoSpeed.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2759EF81305D85B700F524FD /* Debug configuration for PBXNativeTarget "VideoSpeed" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VideoSpeed/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VideoSpeed;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mihasic.VideoSpeed;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2759EF82305D85B700F524FD /* Release configuration for PBXNativeTarget "VideoSpeed" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VideoSpeed/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VideoSpeed;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				INFOPLIST_KEY_NSViewGestureRecognizerIsExclusive = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mihasic.VideoSpeed;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2759EF52305D85B600F524FD /* Build configuration list for PBXProject "VideoSpeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2759EF7A305D85B700F524FD /* Debug configuration for PBXProject "VideoSpeed" */,
+				2759EF7B305D85B700F524FD /* Release configuration for PBXProject "VideoSpeed" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		2759EF7C305D85B700F524FD /* Build configuration list for PBXNativeTarget "VideoSpeed Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2759EF7D305D85B700F524FD /* Debug configuration for PBXNativeTarget "VideoSpeed Extension" */,
+				2759EF7E305D85B700F524FD /* Release configuration for PBXNativeTarget "VideoSpeed Extension" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		2759EF80305D85B700F524FD /* Build configuration list for PBXNativeTarget "VideoSpeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2759EF81305D85B700F524FD /* Debug configuration for PBXNativeTarget "VideoSpeed" */,
+				2759EF82305D85B700F524FD /* Release configuration for PBXNativeTarget "VideoSpeed" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2759EF4F305D85B600F524FD /* Project object */;
+	validationLevel = 1;
+}

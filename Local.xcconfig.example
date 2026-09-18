@@ -1,0 +1,2 @@
+// cp Local.xcconfig.example Local.xcconfig and fill in your Apple team ID (Local.xcconfig is gitignored)
+DEVELOPMENT_TEAM = XXXXXXXXXX

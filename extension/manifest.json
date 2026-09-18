@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "VideoSpeed",
+  "version": "1.0",
+  "description": "Set the playback rate of every video on the current page (1×, 1.5×, 2×), including videos inside iframes.",
+  "icons": {
+    "48": "images/icon-48.png",
+    "96": "images/icon-96.png",
+    "128": "images/icon-128.png",
+    "256": "images/icon-256.png",
+    "512": "images/icon-512.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "images/toolbar-icon.svg",
+    "default_title": "VideoSpeed"
+  },
+  "background": {
+    "scripts": ["lib/apply.js", "background.js"]
+  },
+  "permissions": ["scripting"],
+  "host_permissions": ["<all_urls>"],
+  "commands": {
+    "toggle-2x": {
+      "suggested_key": { "default": "Alt+Shift+2" },
+      "description": "Toggle 2× playback on the current page"
+    }
+  }
+}
