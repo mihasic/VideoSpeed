@@ -37,3 +37,7 @@ No automated tests; verify manually in Safari.
 - `manifest.json` changes need rebuild + app relaunch; restart Safari if the extension vanishes.
 - Ad-hoc-signed builds are hidden unless Develop → Allow Unsigned Extensions is on. Team ID lives in gitignored `Local.xcconfig` (copy from `Local.xcconfig.example`), passed via `-xcconfig`; never put `DEVELOPMENT_TEAM` in `project.pbxproj`.
 - `executeScript` throws on restricted pages (Safari pages, PDFs) → popup shows "Cannot access this page".
+
+## CI
+
+`.github/workflows/ci.yml` (JS syntax + manifest check on Ubuntu; unsigned Release build on the `xcode-27` runner — `objectVersion = 110` needs Xcode 27). `release.yml` builds and attaches an unsigned zip to a GitHub Release on `v*` tags.

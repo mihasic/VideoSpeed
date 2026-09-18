@@ -1,0 +1,25 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: xcode-27
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build (unsigned)
+        run: |
+          xcodebuild -project VideoSpeed/VideoSpeed.xcodeproj -scheme VideoSpeed \
+            -configuration Release -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY="" build
+      - name: Package
+        run: ditto -c -k --keepParent build/Build/Products/Release/VideoSpeed.app "VideoSpeed-${GITHUB_REF_NAME}-unsigned.zip"
+      - name: GitHub Release
+        run: gh release create "$GITHUB_REF_NAME" "VideoSpeed-${GITHUB_REF_NAME}-unsigned.zip" --generate-notes --title "VideoSpeed $GITHUB_REF_NAME"
+        env:
+          GH_TOKEN: ${{ github.token }}

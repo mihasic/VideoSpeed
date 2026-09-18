@@ -1,5 +1,7 @@
 # VideoSpeed
 
+[![CI](https://github.com/mihasic/VideoSpeed/actions/workflows/ci.yml/badge.svg)](https://github.com/mihasic/VideoSpeed/actions/workflows/ci.yml)
+
 Safari (macOS) extension: set every `<video>` on the current page to 1×, 1.5× or 2× — including videos inside iframes and open shadow roots. Stateless: acts only when you click, remembers nothing.
 
 ## Install
