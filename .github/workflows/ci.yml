@@ -10,28 +10,14 @@ jobs:
     name: Extension checks
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24
       - name: Syntax-check JS
         run: for f in $(find extension -name '*.js'); do node --check "$f"; done
       - name: Validate manifest
         run: node -e 'const m=require("./extension/manifest.json"); if(m.manifest_version!==3) process.exit(1); console.log(m.name, m.version)'
 
   build:
-    name: Build macOS app
-    runs-on: xcode-27
-    steps:
-      - uses: actions/checkout@v4
-      - name: Build (unsigned)
-        run: |
-          xcodebuild -project VideoSpeed/VideoSpeed.xcodeproj -scheme VideoSpeed \
-            -configuration Release -derivedDataPath build \
-            CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY="" build
-      - name: Package
-        run: ditto -c -k --keepParent build/Build/Products/Release/VideoSpeed.app VideoSpeed-unsigned.zip
-      - uses: actions/upload-artifact@v4
-        with:
-          name: VideoSpeed-unsigned
-          path: VideoSpeed-unsigned.zip
+    uses: ./.github/workflows/build.yml

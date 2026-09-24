@@ -40,4 +40,4 @@ No automated tests; verify manually in Safari.
 
 ## CI
 
-`.github/workflows/ci.yml` (JS syntax + manifest check on Ubuntu; unsigned Release build on the `xcode-27` runner — `objectVersion = 110` needs Xcode 27). `release.yml` builds and attaches an unsigned zip to a GitHub Release on `v*` tags.
+`.github/workflows/build.yml` is the reusable unsigned Release build on the `xcode-27` runner (`objectVersion = 110` needs Xcode 27). `ci.yml` = JS syntax + manifest check on Ubuntu + `build.yml`. `release.yml` on `v*` tags: fails unless tag == `v` + manifest `version`, then `build.yml`, then attaches the zip to a GitHub Release.

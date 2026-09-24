@@ -1,0 +1,29 @@
+name: Build
+
+# Reusable: unsigned Release build → zip uploaded as artifact "VideoSpeed-unsigned".
+on:
+  workflow_call:
+    inputs:
+      zip:
+        type: string
+        default: VideoSpeed-unsigned.zip
+
+jobs:
+  build:
+    name: Build macOS app
+    runs-on: xcode-27
+    env:
+      ZIP: ${{ inputs.zip }}
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build (unsigned)
+        run: |
+          xcodebuild -project VideoSpeed/VideoSpeed.xcodeproj -scheme VideoSpeed \
+            -configuration Release -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY="" build
+      - name: Package
+        run: ditto -c -k --keepParent build/Build/Products/Release/VideoSpeed.app "$ZIP"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: VideoSpeed-unsigned
+          path: ${{ env.ZIP }}

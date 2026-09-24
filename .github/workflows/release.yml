@@ -5,21 +5,34 @@ on:
     tags: ['v*']
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  release:
-    runs-on: xcode-27
+  check:
+    name: Tag matches manifest version
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Build (unsigned)
-        run: |
-          xcodebuild -project VideoSpeed/VideoSpeed.xcodeproj -scheme VideoSpeed \
-            -configuration Release -derivedDataPath build \
-            CODE_SIGNING_ALLOWED=NO CODE_SIGN_IDENTITY="" build
-      - name: Package
-        run: ditto -c -k --keepParent build/Build/Products/Release/VideoSpeed.app "VideoSpeed-${GITHUB_REF_NAME}-unsigned.zip"
+      - uses: actions/checkout@v7
+      - run: |
+          v="v$(jq -r .version extension/manifest.json)"
+          [ "$v" = "$GITHUB_REF_NAME" ] || { echo "::error::tag $GITHUB_REF_NAME != manifest $v"; exit 1; }
+
+  build:
+    needs: check
+    uses: ./.github/workflows/build.yml
+    with:
+      zip: VideoSpeed-${{ github.ref_name }}-unsigned.zip
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: VideoSpeed-unsigned
       - name: GitHub Release
-        run: gh release create "$GITHUB_REF_NAME" "VideoSpeed-${GITHUB_REF_NAME}-unsigned.zip" --generate-notes --title "VideoSpeed $GITHUB_REF_NAME"
+        run: gh release create "$GITHUB_REF_NAME" "VideoSpeed-${GITHUB_REF_NAME}-unsigned.zip" --repo "$GITHUB_REPOSITORY" --generate-notes --title "VideoSpeed $GITHUB_REF_NAME"
         env:
           GH_TOKEN: ${{ github.token }}
