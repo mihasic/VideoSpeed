@@ -29,7 +29,7 @@ No automated tests; verify manually in Safari.
 `lib/apply.js` is a plain script loaded by both popup and background (no ES modules).
 - `setRateInFrame(rate)` is serialized into every frame via `scripting.executeScript({allFrames: true, func, args})` — must stay self-contained. Walks `document` + open shadow roots. `rate === null` = probe.
 - `applyRate(tabId, rate)` aggregates per-frame results → `{ frames, rates }`; `toggleRate` implements the ⌥⇧2 rule.
-- Popup probes on open, applies on click; status is derived from actual post-apply rates.
+- Popup probes on open (status derived from actual rates), applies on click then closes; stays open only on error.
 
 ## Safari gotchas
 

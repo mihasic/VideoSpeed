@@ -13,7 +13,9 @@ async function run(rate) {
   const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
   if (!tab) { statusEl.textContent = "No active tab"; return; }
   try {
-    render(await applyRate(tab.id, rate));
+    const result = await applyRate(tab.id, rate);
+    if (rate === null) render(result);
+    else window.close();
   } catch (e) {
     statusEl.textContent = "Cannot access this page";
     console.error("VideoSpeed:", e);
