@@ -17,6 +17,5 @@ button {
   cursor: pointer;
 }
 button:hover { background: rgba(128,128,128,.25); }
-button.primary { border-color: #0a84ff; }
 button.active { background: #0a84ff; color: #fff; border-color: #0a84ff; }
 #status { margin-top: 10px; opacity: .75; min-height: 1.2em; }
